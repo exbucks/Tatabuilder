@@ -1,0 +1,797 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0DFCA15E-6DA6-403A-8AF4-13AA2D806CCD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TataBuilder</RootNamespace>
+    <AssemblyName>TataBuilder</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\Work\Alzayed\Tata\pub\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <TargetZone>Internet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>A68FC76F17763BFD959338DFC474932FCBCF10CD</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>TataBuilder_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge.Video">
+      <HintPath>libs\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>libs\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Command.4, Version=4.0.20123.19538, Culture=neutral, PublicKeyToken=e808566f358766d8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="C1.Win.C1Input.4, Version=4.0.20123.33290, Culture=neutral, PublicKeyToken=7e7ff60f0c214f9a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="C1.Win.C1Ribbon.4, Version=4.0.20123.421, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="C1.Win.C1Sizer.4, Version=4.1.20123.71, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="C1.Win.C1SplitContainer.4, Version=4.0.20123.37, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>libs\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="NAudio, Version=1.7.2.19, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\NAudio.1.7.2\lib\net35\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.6.0.5\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="actionsettings\ActionSettingInstantChangeBGM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingInstantChangeBGM.Designer.cs">
+      <DependentUpon>ActionSettingInstantChangeBGM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingInstantChangeState.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingInstantChangeState.Designer.cs">
+      <DependentUpon>ActionSettingInstantChangeState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingInstantDispatchEvent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingInstantDispatchEvent.Designer.cs">
+      <DependentUpon>ActionSettingInstantDispatchEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingInstantEnableActor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingInstantEnableActor.Designer.cs">
+      <DependentUpon>ActionSettingInstantEnableActor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingInstantEnableBGM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingInstantEnableBGM.Designer.cs">
+      <DependentUpon>ActionSettingInstantEnableBGM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingInstantGoScene.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingInstantGoScene.Designer.cs">
+      <DependentUpon>ActionSettingInstantGoScene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingInstantPlaySound.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingInstantPlaySound.Designer.cs">
+      <DependentUpon>ActionSettingInstantPlaySound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingInstantPlayVoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingInstantPlayVoice.Designer.cs">
+      <DependentUpon>ActionSettingInstantPlayVoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingInstantReadMode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingInstantReadMode.Designer.cs">
+      <DependentUpon>ActionSettingInstantReadMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingInstantStopAnimation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingInstantStopAnimation.Designer.cs">
+      <DependentUpon>ActionSettingInstantStopAnimation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingInstantStopAllSounds.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingInstantStopAllSounds.Designer.cs">
+      <DependentUpon>ActionSettingInstantStopAllSounds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingInstantStopSound.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingInstantStopSound.Designer.cs">
+      <DependentUpon>ActionSettingInstantStopSound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingInstantStopVoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingInstantStopVoice.designer.cs">
+      <DependentUpon>ActionSettingInstantStopVoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingInstantZIndex.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingInstantZIndex.Designer.cs">
+      <DependentUpon>ActionSettingInstantZIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingIntervalAnimate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingIntervalAnimate.Designer.cs">
+      <DependentUpon>ActionSettingIntervalAnimate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingIntervalBezier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingIntervalBezier.Designer.cs">
+      <DependentUpon>ActionSettingIntervalBezier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingIntervalDelay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingIntervalDelay.Designer.cs">
+      <DependentUpon>ActionSettingIntervalDelay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingIntervalFade.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingIntervalFade.Designer.cs">
+      <DependentUpon>ActionSettingIntervalFade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingIntervalMove.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingIntervalMove.Designer.cs">
+      <DependentUpon>ActionSettingIntervalMove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingIntervalRotate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingIntervalRotate.Designer.cs">
+      <DependentUpon>ActionSettingIntervalRotate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingIntervalScale.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingIntervalScale.Designer.cs">
+      <DependentUpon>ActionSettingIntervalScale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingBasePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingInstantClearAvatar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingInstantClearAvatar.Designer.cs">
+      <DependentUpon>ActionSettingInstantClearAvatar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingInstantMakeAvatar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingInstantMakeAvatar.Designer.cs">
+      <DependentUpon>ActionSettingInstantMakeAvatar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingInstantEnableVoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingInstantEnableVoice.Designer.cs">
+      <DependentUpon>ActionSettingInstantEnableVoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingInstantEnableSound.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="actionsettings\ActionSettingInstantEnableSound.Designer.cs">
+      <DependentUpon>ActionSettingInstantEnableSound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="actions\TActionInstantEnableSound.cs" />
+    <Compile Include="actions\TActionInstantEnableVoice.cs" />
+    <Compile Include="actions\TActionInstantStopVoice.cs" />
+    <Compile Include="actions\TActionInstantPlayVoice.cs" />
+    <Compile Include="actions\TActionInstantClearAvatar.cs" />
+    <Compile Include="actions\TActionInstantMakeAvatar.cs" />
+    <Compile Include="actions\TActionRuntime.cs" />
+    <Compile Include="AssemblyFileVersion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AssemblyFileVersion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CookieAwareWebClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FrmDeploy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDeploy.Designer.cs">
+      <DependentUpon>FrmDeploy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAvatarMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAvatarMaker.Designer.cs">
+      <DependentUpon>FrmAvatarMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmImagesPicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmImagesPicker.Designer.cs">
+      <DependentUpon>FrmImagesPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNewProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNewProject.Designer.cs">
+      <DependentUpon>FrmNewProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProcessing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProcessing.Designer.cs">
+      <DependentUpon>FrmProcessing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPublish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPublish.Designer.cs">
+      <DependentUpon>FrmPublish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSignIn.Designer.cs">
+      <DependentUpon>FrmSignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmZoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmZoom.Designer.cs">
+      <DependentUpon>FrmZoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsExtension.cs" />
+    <Compile Include="LoopAudioFileReader.cs" />
+    <Compile Include="RulerControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SelectablePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SoundListItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SoundListItem.Designer.cs">
+      <DependentUpon>SoundListItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CursorUtil.cs" />
+    <Compile Include="DragHelper.cs" />
+    <Compile Include="FocuslessButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FrmAnimationTimeline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAnimationTimeline.Designer.cs">
+      <DependentUpon>FrmAnimationTimeline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEmulator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmulator.Designer.cs">
+      <DependentUpon>FrmEmulator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMainContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMainContainer.Designer.cs">
+      <DependentUpon>FrmMainContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmWorkspace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmWorkspace.Designer.cs">
+      <DependentUpon>FrmWorkspace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ITimeLineDataSource.cs" />
+    <Compile Include="MDIClientSupport.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="actions\TAction.cs" />
+    <Compile Include="actions\TActionInstant.cs" />
+    <Compile Include="actions\TActionInstantChangeBGM.cs" />
+    <Compile Include="actions\TActionInstantChangeState.cs" />
+    <Compile Include="actions\TActionInstantDispatchEvent.cs" />
+    <Compile Include="actions\TActionInstantEnableActor.cs" />
+    <Compile Include="actions\TActionInstantEnableBGM.cs" />
+    <Compile Include="actions\TActionInstantGoScene.cs" />
+    <Compile Include="actions\TActionInstantPlaySound.cs" />
+    <Compile Include="actions\TActionInstantReadMode.cs" />
+    <Compile Include="actions\TActionInstantStopAnimation.cs" />
+    <Compile Include="actions\TActionInstantStopAllSounds.cs" />
+    <Compile Include="actions\TActionInstantStopSound.cs" />
+    <Compile Include="actions\TActionInstantZIndex.cs" />
+    <Compile Include="actions\TActionInterval.cs" />
+    <Compile Include="actions\TActionIntervalAnimate.cs" />
+    <Compile Include="actions\TActionIntervalBezier.cs" />
+    <Compile Include="actions\TActionIntervalDelay.cs" />
+    <Compile Include="actions\TActionIntervalFade.cs" />
+    <Compile Include="actions\TActionIntervalMove.cs" />
+    <Compile Include="actions\TActionIntervalRotate.cs" />
+    <Compile Include="actions\TActionIntervalScale.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TActor.cs" />
+    <Compile Include="TAnimation.cs" />
+    <Compile Include="TAvatarActor.cs" />
+    <Compile Include="TDocument.cs" />
+    <Compile Include="DoubleBufferedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TEasingFunction.cs" />
+    <Compile Include="THistoryActions.cs" />
+    <Compile Include="TImageActor.cs" />
+    <Compile Include="TimeLineView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TimeLineView.Designer.cs">
+      <DependentUpon>TimeLineView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TLayer.cs" />
+    <Compile Include="TLibraryManager.cs" />
+    <Compile Include="ToggleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TScene.cs" />
+    <Compile Include="TSceneManager.cs" />
+    <Compile Include="TSequence.cs" />
+    <Compile Include="TSoundEmulator.cs" />
+    <Compile Include="TTextActor.cs" />
+    <Compile Include="TUtil.cs" />
+    <EmbeddedResource Include="actionsettings\ActionSettingBasePanel.resx">
+      <DependentUpon>ActionSettingBasePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="actionsettings\ActionSettingInstantChangeBGM.resx">
+      <DependentUpon>ActionSettingInstantChangeBGM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="actionsettings\ActionSettingInstantChangeState.resx">
+      <DependentUpon>ActionSettingInstantChangeState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="actionsettings\ActionSettingInstantDispatchEvent.resx">
+      <DependentUpon>ActionSettingInstantDispatchEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="actionsettings\ActionSettingInstantEnableActor.resx">
+      <DependentUpon>ActionSettingInstantEnableActor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="actionsettings\ActionSettingInstantEnableBGM.resx">
+      <DependentUpon>ActionSettingInstantEnableBGM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="actionsettings\ActionSettingInstantGoScene.resx">
+      <DependentUpon>ActionSettingInstantGoScene.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="actionsettings\ActionSettingInstantPlaySound.resx">
+      <DependentUpon>ActionSettingInstantPlaySound.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="actionsettings\ActionSettingInstantPlayVoice.resx">
+      <DependentUpon>ActionSettingInstantPlayVoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="actionsettings\ActionSettingInstantReadMode.resx">
+      <DependentUpon>ActionSettingInstantReadMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="actionsettings\ActionSettingInstantStopAnimation.resx">
+      <DependentUpon>ActionSettingInstantStopAnimation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="actionsettings\ActionSettingInstantStopAllSounds.resx">
+      <DependentUpon>ActionSettingInstantStopAllSounds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="actionsettings\ActionSettingInstantStopSound.resx">
+      <DependentUpon>ActionSettingInstantStopSound.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="actionsettings\ActionSettingInstantStopVoice.resx">
+      <DependentUpon>ActionSettingInstantStopVoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="actionsettings\ActionSettingInstantZIndex.resx">
+      <DependentUpon>ActionSettingInstantZIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="actionsettings\ActionSettingIntervalAnimate.resx">
+      <DependentUpon>ActionSettingIntervalAnimate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="actionsettings\ActionSettingIntervalBezier.resx">
+      <DependentUpon>ActionSettingIntervalBezier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="actionsettings\ActionSettingIntervalDelay.resx">
+      <DependentUpon>ActionSettingIntervalDelay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="actionsettings\ActionSettingIntervalFade.resx">
+      <DependentUpon>ActionSettingIntervalFade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="actionsettings\ActionSettingIntervalMove.resx">
+      <DependentUpon>ActionSettingIntervalMove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="actionsettings\ActionSettingIntervalRotate.resx">
+      <DependentUpon>ActionSettingIntervalRotate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="actionsettings\ActionSettingIntervalScale.resx">
+      <DependentUpon>ActionSettingIntervalScale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="actionsettings\ActionSettingInstantClearAvatar.resx">
+      <DependentUpon>ActionSettingInstantClearAvatar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="actionsettings\ActionSettingInstantMakeAvatar.resx">
+      <DependentUpon>ActionSettingInstantMakeAvatar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="actionsettings\ActionSettingInstantEnableVoice.resx">
+      <DependentUpon>ActionSettingInstantEnableVoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="actionsettings\ActionSettingInstantEnableSound.resx">
+      <DependentUpon>ActionSettingInstantEnableSound.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDeploy.resx">
+      <DependentUpon>FrmDeploy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAvatarMaker.resx">
+      <DependentUpon>FrmAvatarMaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmImagesPicker.resx">
+      <DependentUpon>FrmImagesPicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNewProject.resx">
+      <DependentUpon>FrmNewProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProcessing.resx">
+      <DependentUpon>FrmProcessing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPublish.resx">
+      <DependentUpon>FrmPublish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSignIn.resx">
+      <DependentUpon>FrmSignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmZoom.resx">
+      <DependentUpon>FrmZoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SoundListItem.resx">
+      <DependentUpon>SoundListItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAnimationTimeline.resx">
+      <DependentUpon>FrmAnimationTimeline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmulator.resx">
+      <DependentUpon>FrmEmulator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMainContainer.resx">
+      <DependentUpon>FrmMainContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmWorkspace.resx">
+      <DependentUpon>FrmWorkspace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeLineView.resx">
+      <DependentUpon>TimeLineView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AssemblyFileVersion.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>AssemblyFileVersion.cs</LastGenOutput>
+    </None>
+    <None Include="fonts\aller.ttc" />
+    <None Include="fonts\ara_hamah_1964_r.ttf" />
+    <None Include="fonts\ara_jozoor.ttf" />
+    <None Include="fonts\arial.ttc" />
+    <None Include="fonts\kufyan_arabic.ttc" />
+    <None Include="fonts\lato.ttc" />
+    <None Include="fonts\love_ya_like_a_sister.ttf" />
+    <None Include="fonts\nurkholis.ttf" />
+    <None Include="fonts\open_sans.ttc" />
+    <None Include="fonts\quicksand.ttc" />
+    <None Include="fonts\roboto.ttc" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="TataBuilder_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\actor_preview_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.ico" />
+    <None Include="images\btn_resources_list.png" />
+    <None Include="images\btn_resources_grid.png" />
+    <None Include="images\toolbar_background_color.png" />
+    <None Include="images\emulator_img_text_on.png" />
+    <None Include="images\emulator_img_text_off.png" />
+    <None Include="images\icon_action_enablevoice.png" />
+    <None Include="images\icon_action_enablesound.png" />
+    <None Include="images\emulator_img_voice_on.png" />
+    <None Include="images\emulator_img_voice_off.png" />
+    <None Include="images\emulator_img_effect_on.png" />
+    <None Include="images\emulator_img_effect_off.png" />
+    <None Include="images\emulator_img_bgm_on.png" />
+    <None Include="images\emulator_img_bgm_off.png" />
+    <None Include="images\btn_change_image_actor.png" />
+    <None Include="images\icon_action_stopvoice.png" />
+    <None Include="images\icon_action_playvoice.png" />
+    <None Include="images\btn_unlocked_layer.png" />
+    <None Include="images\btn_locked_layer.png" />
+    <None Include="images\loading.gif" />
+    <None Include="images\emulator_img_help_content.png" />
+    <None Include="images\emulator_img_menu_dialog_bg.png" />
+    <None Include="images\icon_action_makeavatar.png" />
+    <None Include="images\icon_action_clearavatar.png" />
+    <None Include="images\emulator_img_zoom_small.png" />
+    <None Include="images\emulator_img_zoom_big.png" />
+    <None Include="images\emulator_img_avatar_maker.png" />
+    <None Include="images\toolbar_avatar_mask.png" />
+    <None Include="images\toolbar_avatar_frame.png" />
+    <None Include="images\toolbar_avatar_default.png" />
+    <None Include="images\avatar_mask.png" />
+    <None Include="images\avatar_frame.png" />
+    <None Include="images\avatar_default.png" />
+    <None Include="images\toolbar_home_bounding.png" />
+    <None Include="images\toolbar_windows_check.png" />
+    <None Include="images\btn_small_up.png" />
+    <None Include="images\btn_small_right.png" />
+    <None Include="images\btn_small_recycle.png" />
+    <None Include="images\btn_small_left.png" />
+    <None Include="images\btn_small_edit.png" />
+    <None Include="images\btn_small_down.png" />
+    <None Include="images\btn_small_delete.png" />
+    <None Include="images\btn_small_check.png" />
+    <None Include="images\btn_small_add.png" />
+    <None Include="images\toolbar_project_prev.png" />
+    <None Include="images\toolbar_project_next.png" />
+    <None Include="images\resources_sound_note.png" />
+    <None Include="images\btn_stop_sound_over.png" />
+    <None Include="images\btn_stop_sound.png" />
+    <None Include="images\btn_play_sound_over.png" />
+    <None Include="images\btn_play_sound.png" />
+    <None Include="images\toolbar_home_hand.png" />
+    <None Include="images\btn_layers_remove.png" />
+    <None Include="images\btn_layers_clone.png" />
+    <None Include="images\btn_resources_remove.png" />
+    <None Include="images\btn_resources_import.png" />
+    <None Include="images\btn_resources_sound.png" />
+    <None Include="images\btn_resources_image.png" />
+    <None Include="images\resources_tab_line.png" />
+    <None Include="images\resources_tab_header.png" />
+    <None Include="images\btn_close_panel.png" />
+    <None Include="images\toolbar_animations_animation_item.png" />
+    <None Include="images\emulator_img_nav_prev.png" />
+    <None Include="images\emulator_img_nav_next.png" />
+    <None Include="images\emulator_img_sounds_on.png" />
+    <None Include="images\emulator_img_sounds_off.png" />
+    <None Include="images\emulator_img_scenes_on.png" />
+    <None Include="images\emulator_img_scenes_off.png" />
+    <None Include="images\emulator_img_menu_button.png" />
+    <None Include="images\emulator_img_menu_bar.png" />
+    <None Include="images\emulator_img_help_on.png" />
+    <None Include="images\emulator_img_help_off.png" />
+    <None Include="images\emulator_img_back_on.png" />
+    <None Include="images\emulator_img_back_off.png" />
+    <None Include="images\emulator_bg_iphone.png" />
+    <None Include="images\emulator_tablet_snapshoot.png" />
+    <None Include="images\emulator_tablet_relaunch.png" />
+    <None Include="images\emulator_tablet_exit.png" />
+    <None Include="images\emulator_phone_snapshoot.png" />
+    <None Include="images\emulator_phone_relaunch.png" />
+    <None Include="images\emulator_phone_exit.png" />
+    <None Include="images\emulator_tablet.png" />
+    <None Include="images\emulator_phone.png" />
+    <None Include="images\toolbar_home_tablet.png" />
+    <None Include="images\toolbar_home_phone.png" />
+    <None Include="images\icon_instant_item.png" />
+    <None Include="images\action_list_cell_selected.png" />
+    <None Include="images\action_list_cell.png" />
+    <None Include="images\icon_action_zindex.png" />
+    <None Include="images\icon_action_stopsound.png" />
+    <None Include="images\icon_action_stopallsounds.png" />
+    <None Include="images\icon_action_stop.png" />
+    <None Include="images\icon_action_scale.png" />
+    <None Include="images\icon_action_rotate.png" />
+    <None Include="images\icon_action_readmode.png" />
+    <None Include="images\icon_action_playsound.png" />
+    <None Include="images\icon_action_move.png" />
+    <None Include="images\icon_action_instant.png" />
+    <None Include="images\icon_action_gotoscene.png" />
+    <None Include="images\icon_action_fade.png" />
+    <None Include="images\icon_action_enablebgm.png" />
+    <None Include="images\icon_action_enableactor.png" />
+    <None Include="images\icon_action_dispatch.png" />
+    <None Include="images\icon_action_delay.png" />
+    <None Include="images\icon_action_custom.png" />
+    <None Include="images\icon_action_changestate.png" />
+    <None Include="images\icon_action_changebgm.png" />
+    <None Include="images\icon_action_bezier.png" />
+    <None Include="images\icon_action_animate.png" />
+    <None Include="images\btn_repeat_some.png" />
+    <None Include="images\btn_repeat_one.png" />
+    <None Include="images\btn_repeat_loop.png" />
+    <None Include="images\zoom_out.png" />
+    <None Include="images\zoom_in.png" />
+    <None Include="images\timeline_header.png" />
+    <None Include="images\row_delete.png" />
+    <None Include="images\row_add_before.png" />
+    <None Include="images\row_add_after.png" />
+    <None Include="images\row_add.png" />
+    <None Include="images\column_delete.png" />
+    <None Include="images\column_add_before.png" />
+    <None Include="images\column_add_after.png" />
+    <None Include="images\column_add.png" />
+    <None Include="images\action_delete.png" />
+    <None Include="images\Pinned.png" />
+    <None Include="images\Unpinned.png" />
+    <None Include="images\toolbar_switch_windows.png" />
+    <None Include="images\toolbar_cascade.png" />
+    <None Include="images\toolbar_sound_local.png" />
+    <None Include="images\toolbar_image_online.png" />
+    <None Include="images\toolbar_image_local.png" />
+    <None Include="images\toolbar_image_capture.png" />
+    <None Include="cursor_rotation.ico" />
+    <None Include="images\outline_scene_sel.png" />
+    <None Include="images\outline_scene.png" />
+    <None Include="images\outline_actor_sel.png" />
+    <None Include="images\outline_actor.png" />
+    <None Include="images\scene_sel_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="UndoFramework\UndoFramework.csproj">
+      <Project>{211753fc-8c4d-4f05-ab4b-130fabecf30e}</Project>
+      <Name>UndoFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WIA">
+      <Guid>{94A0E92D-43C0-494E-AC29-FD45948A5221}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>set textTemplatingPath="%25CommonProgramFiles(x86)%25\Microsoft Shared\TextTemplating\$(VisualStudioVersion)\texttransform.exe"
+if %25textTemplatingPath%25=="\Microsoft Shared\TextTemplating\$(VisualStudioVersion)\texttransform.exe" set textTemplatingPath="%25CommonProgramFiles%25\Microsoft Shared\TextTemplating\$(VisualStudioVersion)\texttransform.exe"
+%25textTemplatingPath%25 "$(ProjectDir)AssemblyFileVersion.tt"</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

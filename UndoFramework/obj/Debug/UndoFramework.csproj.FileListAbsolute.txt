@@ -1,0 +1,5 @@
+G:\Work\visual studio\tata\windows\UndoFramework\bin\Debug\GuiLabs.Undo.dll
+G:\Work\visual studio\tata\windows\UndoFramework\bin\Debug\GuiLabs.Undo.pdb
+G:\Work\visual studio\tata\windows\UndoFramework\obj\Debug\UndoFramework.csprojResolveAssemblyReference.cache
+G:\Work\visual studio\tata\windows\UndoFramework\obj\Debug\GuiLabs.Undo.dll
+G:\Work\visual studio\tata\windows\UndoFramework\obj\Debug\GuiLabs.Undo.pdb

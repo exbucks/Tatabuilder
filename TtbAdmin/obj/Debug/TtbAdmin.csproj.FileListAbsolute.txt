@@ -1,0 +1,6 @@
+G:\Work\visual studio\tata\windows\bin\Debug\TtbAdmin.exe.config
+G:\Work\visual studio\tata\windows\bin\Debug\TtbAdmin.exe
+G:\Work\visual studio\tata\windows\bin\Debug\TtbAdmin.pdb
+G:\Work\visual studio\tata\windows\TtbAdmin\obj\Debug\TtbAdmin.csprojResolveAssemblyReference.cache
+G:\Work\visual studio\tata\windows\TtbAdmin\obj\Debug\TtbAdmin.exe
+G:\Work\visual studio\tata\windows\TtbAdmin\obj\Debug\TtbAdmin.pdb
